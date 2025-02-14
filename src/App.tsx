@@ -625,13 +625,13 @@ function App() {
                 title: "Operational Consistency",
                 description: "Ensure consistent, error-free operations by automating routine tasks and processes.",
                 icon: <RefreshCw className="w-6 h-6" />,
-                image: "https://www.nocontractvoip.com/wp-content/uploads/2022/08/automation-software-technology-process-system-business-concept-123697421.jpg"
+                image: "https://media.licdn.com/dms/image/sync/v2/D5627AQF8YptK4UAZuw/articleshare-shrink_800/articleshare-shrink_800/0/1727675210434?e=2147483647&v=beta&t=uDbXVwZS5yN8Svk61BKja4lMpniORZqfCLxJQBEr0zQ"
               },
               {
                 title: "24/7 Intelligent Support",
-                description: "Provide round-the-clock support with AI-powered chatbots and virtual assistants.",
+                description: "Provide round-the-clock assistance with AI-powered support systems.",
                 icon: <MessageSquare className="w-6 h-6" />,
-                image: "https://www.morgan.edu/Images/News/VirtualAssistant.jpg"
+                image: "https://www.salesforce.com/news/wp-content/uploads/sites/3/2025/02/Why-Digital-Labor-Will-Reshape-the-Enterprise-3.png"
               },
               {
                 title: "Data-Driven Decision Making",
