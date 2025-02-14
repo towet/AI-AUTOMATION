@@ -866,7 +866,7 @@ function App() {
               Success Stories
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-              See how other businesses have transformed their operations with our AI automation solutions
+              See how other businesses have transformed their operations with our AI automation solutions 
             </p>
           </div>
 
@@ -937,7 +937,7 @@ function App() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-              Book a free 30-minute consultation with our AI automation experts. We'll analyze your business processes and show you how to:
+              Book a free 20-minute consultation with our AI automation experts. We'll analyze your business processes and show you how to:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
               <div className="bg-gray-800/30 backdrop-blur-sm p-6 rounded-lg border border-cyan-500/10 hover:border-cyan-500/30 transition-all duration-300">
