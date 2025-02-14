@@ -102,14 +102,22 @@ function Modal({
               onClick={onClose}
               className="text-gray-400 hover:text-white transition-colors p-1"
             >
+<<<<<<< HEAD
               <X className="h-5 w-5" />
+=======
+              <X className="h-5 w-5 sm:h-6 sm:w-6" />
+>>>>>>> a2eb5f4d47b1585d26e095911f740bab082a15fd
             </button>
           </div>
 
           <div className="space-y-6 sm:space-y-8 mt-4 sm:mt-6">
             <div>
               <h4 className="text-base sm:text-lg font-semibold text-white mb-3 flex items-center">
+<<<<<<< HEAD
                 <Target className="w-4 h-4 mr-2 text-cyan-400" />
+=======
+                <Target className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-cyan-400" />
+>>>>>>> a2eb5f4d47b1585d26e095911f740bab082a15fd
                 Use Cases
               </h4>
               <ul className="grid grid-cols-1 gap-3 sm:gap-4">
@@ -176,8 +184,12 @@ function App() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [showChat, setShowChat] = useState(false);
   const [isConsultModalOpen, setIsConsultModalOpen] = useState(false);
+<<<<<<< HEAD
   const [showRoiNotification, setShowRoiNotification] = useState(false);
 
+=======
+  
+>>>>>>> a2eb5f4d47b1585d26e095911f740bab082a15fd
   useEffect(() => {
     const handleScroll = () => {
       const totalScroll = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -404,6 +416,7 @@ function App() {
     }
   ];
 
+<<<<<<< HEAD
   const RoiNotification = () => {
     if (!showRoiNotification) return null;
 
@@ -456,6 +469,8 @@ function App() {
     };
   }, []);
 
+=======
+>>>>>>> a2eb5f4d47b1585d26e095911f740bab082a15fd
   return (
     <div className="bg-gray-900 min-h-screen">
       {/* Scroll Progress Bar */}
@@ -625,18 +640,29 @@ function App() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 animate-slide-right animation-delay-400">
                   <button 
+<<<<<<< HEAD
                     className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-600 to-indigo-600 text-white rounded-full hover:from-cyan-500 hover:to-indigo-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-lg font-semibold flex items-center justify-center group"
                     onClick={() => setIsConsultModalOpen(true)}
                   >
                     consult our expert
+=======
+                    onClick={() => setIsConsultModalOpen(true)}
+                    className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-full hover:from-cyan-400 hover:to-cyan-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-lg font-semibold flex items-center justify-center group"
+                  >
+                    Chat with AI Expert
+>>>>>>> a2eb5f4d47b1585d26e095911f740bab082a15fd
                     <MessageSquare className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                   <button 
                     className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-400 rounded-full hover:border-cyan-400 hover:text-cyan-300 transition-all duration-300 text-lg font-semibold flex items-center justify-center group"
+<<<<<<< HEAD
                     onClick={() => {
                       setShowRoiNotification(true);
                       setTimeout(() => setShowRoiNotification(false), 5000);
                     }}
+=======
+                    onClick={() => setShowCalculator(true)}
+>>>>>>> a2eb5f4d47b1585d26e095911f740bab082a15fd
                   >
                     Calculate ROI
                     <Calculator className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -685,7 +711,11 @@ function App() {
               },
               {
                 title: "24/7 Intelligent Support",
+<<<<<<< HEAD
                 description: "Provide round-the-clock support with AI-powered virtual assistants.",
+=======
+                description: "Provide round-the-clock assistance with AI-powered support systems.",
+>>>>>>> a2eb5f4d47b1585d26e095911f740bab082a15fd
                 icon: <MessageSquare className="w-6 h-6" />,
                 image: "https://www.salesforce.com/news/wp-content/uploads/sites/3/2025/02/Why-Digital-Labor-Will-Reshape-the-Enterprise-3.png"
               },
@@ -993,6 +1023,10 @@ function App() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+<<<<<<< HEAD
+=======
+              {/* Updated: 2025-02-14 16:25 - Testing GitHub sync */}
+>>>>>>> a2eb5f4d47b1585d26e095911f740bab082a15fd
               Book a free 20-minute consultation with our AI automation experts. We'll analyze your business processes and show you how to:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
@@ -1359,9 +1393,12 @@ function App() {
           service={selectedService}
         />
       )}
+<<<<<<< HEAD
       {showRoiNotification && (
         <RoiNotification />
       )}
+=======
+>>>>>>> a2eb5f4d47b1585d26e095911f740bab082a15fd
     </div>
   );
 }
