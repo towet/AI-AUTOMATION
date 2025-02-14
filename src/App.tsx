@@ -933,48 +933,49 @@ function App() {
       </section>
 
       {/* Consultation CTA Section */}
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-gray-900 via-gray-900/95 to-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-transparent" />
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/30 to-indigo-900/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(6,182,212,0.1),transparent_70%)]" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-100 mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-              Book a free 20-minute consultation with our AI automation experts. We'll analyze your business processes and show you how to:
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
-              <div className="bg-gray-800/30 backdrop-blur-sm p-6 rounded-lg border border-cyan-500/10 hover:border-cyan-500/30 transition-all duration-300">
-                <div className="text-cyan-400 mb-3">
-                  <TrendingUp className="h-8 w-8 mx-auto" />
+          <div className="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-gray-700 hover:border-cyan-500/50">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Ready to Transform Your Business?
+                </h2>
+                <p className="text-gray-300 mb-8 text-lg">
+                  Join thousands of businesses that have already revolutionized their operations with our AI automation solutions.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-full hover:from-cyan-400 hover:to-cyan-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-lg font-semibold flex items-center justify-center group">
+                    Get Started Free
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                  <button className="px-8 py-4 bg-gray-700/50 text-white rounded-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 text-lg font-semibold flex items-center justify-center group">
+                    Schedule Demo
+                    <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </button>
                 </div>
-                <h3 className="text-white font-semibold mb-2">Boost Efficiency</h3>
-                <p className="text-gray-300 text-sm">Cut operational costs by up to 40% with AI automation</p>
               </div>
-              <div className="bg-gray-800/30 backdrop-blur-sm p-6 rounded-lg border border-cyan-500/10 hover:border-cyan-500/30 transition-all duration-300">
-                <div className="text-cyan-400 mb-3">
-                  <Clock className="h-8 w-8 mx-auto" />
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 rounded-2xl transform rotate-3 scale-105" />
+                <div className="relative bg-gray-900/90 p-6 rounded-2xl border border-gray-700">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex space-x-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500" />
+                      <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                      <div className="w-3 h-3 rounded-full bg-green-500" />
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="h-4 bg-gray-700 rounded-full w-3/4" />
+                    <div className="h-4 bg-gray-700 rounded-full w-full" />
+                    <div className="h-4 bg-gray-700 rounded-full w-5/6" />
+                    <div className="h-4 bg-gray-700 rounded-full w-4/6" />
+                  </div>
                 </div>
-                <h3 className="text-white font-semibold mb-2">Save Time</h3>
-                <p className="text-gray-300 text-sm">Automate repetitive tasks and save 15+ hours per week</p>
               </div>
-              <div className="bg-gray-800/30 backdrop-blur-sm p-6 rounded-lg border border-cyan-500/10 hover:border-cyan-500/30 transition-all duration-300">
-                <div className="text-cyan-400 mb-3">
-                  <BarChart className="h-8 w-8 mx-auto" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">Scale Growth</h3>
-                <p className="text-gray-300 text-sm">Handle 3x more tasks without adding headcount</p>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => setIsConsultModalOpen(true)}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-full hover:from-cyan-400 hover:to-cyan-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-lg font-semibold flex items-center justify-center group"
-              >
-                Consult us free
-                <Calendar className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </button>
             </div>
           </div>
         </div>
@@ -1056,119 +1057,30 @@ function App() {
         </div>
       </section>
 
-      {/* Consultation Modal */}
-      {isConsultModalOpen && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div 
-            className="bg-gray-900/90 rounded-2xl p-6 sm:p-8 max-w-lg w-full border border-cyan-500/20 animate-scale-up"
-            style={{ backdropFilter: 'blur(20px)' }}
-          >
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 text-center">Choose Your Preferred Method</h3>
-            <p className="text-gray-400 text-center mb-8">Connect with our AI experts instantly</p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-              {/* Gmail Option */}
-              <a
-                href="mailto:franklintowett@gmail.com?subject=AI%20Automation%20Consultation&body=Hello,%20I%20would%20like%20to%20learn%20more%20about%20your%20AI%20automation%20solutions."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative bg-gradient-to-br from-red-500/10 to-red-600/10 hover:from-red-500/20 hover:to-red-600/20 rounded-xl p-6 border border-red-500/20 hover:border-red-500/40 transition-all duration-300 flex flex-col items-center"
-              >
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 p-2">
-                  <img 
-                    src="https://w7.pngwing.com/pngs/712/520/png-transparent-google-mail-gmail-logo-icon-thumbnail.png"
-                    alt="Gmail"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <span className="text-lg font-semibold text-white mb-2">Gmail</span>
-                <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-red-600/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </a>
-
-              {/* WhatsApp Option */}
-              <a
-                href="https://wa.me/254795704273"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative bg-gradient-to-br from-green-500/10 to-green-600/10 hover:from-green-500/20 hover:to-green-600/20 rounded-xl p-6 border border-green-500/20 hover:border-green-500/40 transition-all duration-300 flex flex-col items-center"
-              >
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 p-2">
-                  <img 
-                    src="https://i.pinimg.com/474x/e9/da/0c/e9da0c83b0a7ec866e17c100079c9d88.jpg"
-                    alt="WhatsApp"
-                    className="w-full h-full object-contain rounded-full"
-                  />
-                </div>
-                <span className="text-lg font-semibold text-white mb-2">WhatsApp</span>
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-green-600/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </a>
+      {/* Footer */}
+      <footer className="bg-gray-900 py-12 border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center mb-8 md:mb-0">
+              <img
+                src="https://ideogram.ai/assets/image/lossless/response/lWw_ZnKWQv-M1k27c9xF4w"
+                alt="Nova Automations"
+                className="h-8 w-auto"
+              />
+              <span className="ml-2 text-xl font-bold text-white">Nova Automations</span>
             </div>
-
-            <button
-              onClick={() => setIsConsultModalOpen(false)}
-              className="w-full px-6 py-3 bg-gray-800/50 hover:bg-gray-800/70 text-gray-300 rounded-xl transition-all duration-300"
-            >
-              Close
-            </button>
+            <div className="flex space-x-6">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a>
+            </div>
+          </div>
+          <div className="mt-8 text-center text-gray-400">
+            &copy; 2025 Nova Automations. All rights reserved.
           </div>
         </div>
-      )}
-      {/* Floating CTA */}
-      <div className="fixed bottom-8 right-8 z-40">
-        <button 
-          onClick={() => setIsConsultModalOpen(true)}
-          className="bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg group"
-        >
-          <MessageSquare className="h-6 w-6 group-hover:scale-110 transition-transform" />
-        </button>
-      </div>
+      </footer>
 
-      {/* Chat Modal */}
-      {showChat && (
-        <div className="fixed bottom-24 right-4 bg-gray-900 rounded-lg shadow-lg p-6 w-80 z-50">
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="text-lg font-semibold text-white">Consult AI Expert</h3>
-            <button
-              onClick={() => setShowChat(false)}
-              className="text-gray-400 hover:text-white"
-            >
-              <X className="h-5 w-5" />
-            </button>
-          </div>
-          
-          <div className="space-y-4">
-            <p className="text-gray-300 text-sm">
-              Get in touch with our AI expert through:
-            </p>
-            
-            {/* Gmail Contact */}
-            <a 
-              href="mailto:franklintowett@gmail.com?subject=AI%20Automation%20Consultation&body=Hello,%20I%20would%20like%20to%20learn%20more%20about%20your%20AI%20automation%20solutions."
-              className="flex items-center justify-center p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
-            >
-              <img 
-                src="https://w7.pngwing.com/pngs/712/520/png-transparent-google-mail-gmail-logo-icon-thumbnail.png" 
-                alt="Gmail"
-                className="w-8 h-8 object-contain"
-              />
-            </a>
-            
-            {/* WhatsApp Contact */}
-            <a 
-              href="https://wa.me/254795704273"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
-            >
-              <img 
-                src="https://i.pinimg.com/474x/e9/da/0c/e9da0c83b0a7ec866e17c100079c9d88.jpg" 
-                alt="WhatsApp"
-                className="w-8 h-8 object-contain rounded"
-              />
-            </a>
-          </div>
-        </div>
-      )}
       {/* Toast */}
       {showToast && (
         <div className="fixed top-4 left-1/2 transform -translate-x-1/2 transition-all duration-300 ease-in-out z-50">
@@ -1178,6 +1090,7 @@ function App() {
           </div>
         </div>
       )}
+
       {/* Modal */}
       {selectedService && (
         <Modal
