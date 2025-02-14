@@ -89,75 +89,75 @@ function Modal({
       <div className="modal-content" onClick={e => e.stopPropagation()}>
         <div className="p-6 space-y-6">
           <div className="flex justify-between items-start">
-            <div className="flex items-center space-x-4">
-              <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-indigo-500/20 rounded-lg">
+            <div className="flex items-start sm:items-center space-x-3 sm:space-x-4">
+              <div className="p-2 sm:p-3 bg-gradient-to-br from-cyan-500/20 to-indigo-500/20 rounded-lg">
                 {service.icon}
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                <p className="text-cyan-400">{service.subtitle}</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-white">{service.title}</h3>
+                <p className="text-sm sm:text-base text-cyan-400">{service.subtitle}</p>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover:text-white transition-colors p-1"
             >
-              <X className="h-6 w-6" />
+              <X className="h-5 w-5 sm:h-6 sm:w-6" />
             </button>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8 mt-4 sm:mt-6">
             <div>
-              <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                <Target className="w-5 h-5 mr-2 text-cyan-400" />
+              <h4 className="text-base sm:text-lg font-semibold text-white mb-3 flex items-center">
+                <Target className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-cyan-400" />
                 Use Cases
               </h4>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ul className="grid grid-cols-1 gap-3 sm:gap-4">
                 {service.additionalInfo?.useCases.map((useCase, i) => (
                   <li key={i} className="flex items-start space-x-2">
-                    <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-300">{useCase}</span>
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm sm:text-base text-gray-300">{useCase}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                <Workflow className="w-5 h-5 mr-2 text-cyan-400" />
+              <h4 className="text-base sm:text-lg font-semibold text-white mb-3 flex items-center">
+                <Workflow className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-cyan-400" />
                 Implementation Process
               </h4>
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {service.additionalInfo?.implementation.map((step, i) => (
                   <div key={i} className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
+                    <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm sm:text-base">
                       {i + 1}
                     </div>
-                    <p className="text-gray-300">{step}</p>
+                    <p className="text-sm sm:text-base text-gray-300">{step}</p>
                   </div>
                 ))}
               </div>
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                <TrendingUp className="w-5 h-5 mr-2 text-cyan-400" />
+              <h4 className="text-base sm:text-lg font-semibold text-white mb-3 flex items-center">
+                <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-cyan-400" />
                 ROI & Benefits
               </h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-3 sm:gap-4">
                 {service.additionalInfo?.roi.map((item, i) => (
-                  <div key={i} className="bg-gray-900/50 p-4 rounded-lg">
-                    <p className="text-gray-300">{item}</p>
+                  <div key={i} className="bg-gray-900/50 p-3 sm:p-4 rounded-lg">
+                    <p className="text-sm sm:text-base text-gray-300">{item}</p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="pt-6 border-t border-gray-700">
+          <div className="pt-4 sm:pt-6 mt-4 sm:mt-6 border-t border-gray-700">
             <button
               onClick={onClose}
-              className="w-full bg-gradient-to-r from-cyan-600 to-indigo-600 text-white py-3 rounded-lg hover:from-cyan-500 hover:to-indigo-500 transition-all duration-300 font-semibold"
+              className="w-full bg-gradient-to-r from-cyan-600 to-indigo-600 text-white py-2.5 sm:py-3 px-4 rounded-lg hover:from-cyan-500 hover:to-indigo-500 transition-all duration-300 font-semibold text-sm sm:text-base"
             >
               Get Started with {service.title}
             </button>
@@ -629,7 +629,7 @@ function App() {
               },
               {
                 title: "24/7 Intelligent Support",
-                description: "Provide round-the-clock support with AI-powered chatbots and virtual assistants.",
+                description: "Provide round-the-clock assistance with AI-powered support systems.",
                 icon: <MessageSquare className="w-6 h-6" />,
                 image: "https://www.salesforce.com/news/wp-content/uploads/sites/3/2025/02/Why-Digital-Labor-Will-Reshape-the-Enterprise-3.png"
               },
@@ -690,7 +690,7 @@ function App() {
                   </h2>
                   <div className="space-y-6 text-gray-300">
                     <p className="leading-relaxed">
-                      Founded in 2023, Nova Automations stands at the forefront of AI automation innovation. We're not just another technology company – we're pioneers in transforming how businesses operate in the digital age.
+                      Founded in 2024, Nova Automations stands at the forefront of AI automation innovation. We're not just another technology company – we're pioneers in transforming how businesses operate in the digital age.
                     </p>
                     <p className="leading-relaxed">
                       Our mission is to democratize AI technology, making enterprise-grade automation accessible to businesses of all sizes. We believe that the future of work is intelligent, efficient, and human-centric.
@@ -866,7 +866,7 @@ function App() {
               Success Stories
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-              See how other businesses have transformed their operations with our AI automation solutions
+              See how other businesses have transformed their operations with our AI automation solutions 
             </p>
           </div>
 
@@ -937,7 +937,8 @@ function App() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-              Book a free 30-minute consultation with our AI automation experts. We'll analyze your business processes and show you how to:
+              {/* Updated: 2025-02-14 16:25 - Testing GitHub sync */}
+              Book a free 20-minute consultation with our AI automation experts. We'll analyze your business processes and show you how to:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
               <div className="bg-gray-800/30 backdrop-blur-sm p-6 rounded-lg border border-cyan-500/10 hover:border-cyan-500/30 transition-all duration-300">
